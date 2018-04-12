@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MainDb" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="MainDbContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Movies" EntityType="MainDb.Movie" />
+    <EntitySet Name="Users" EntityType="MainDb.User" />
+    <EntitySet Name="UserMovieRatings" EntityType="MainDb.UserMovieRating" />
+    <AssociationSet Name="MovieUserMovieRating" Association="MainDb.MovieUserMovieRating">
+      <End Role="Movie" EntitySet="Movies" />
+      <End Role="UserMovieRating" EntitySet="UserMovieRatings" />
+    </AssociationSet>
+    <AssociationSet Name="UserUserMovieRating" Association="MainDb.UserUserMovieRating">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserMovieRating" EntitySet="UserMovieRatings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Movie">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="YearOfRelease" Type="String" Nullable="false" />
+    <Property Name="Genre" Type="String" Nullable="false" />
+    <NavigationProperty Name="UserMovieRating" Relationship="MainDb.MovieUserMovieRating" FromRole="Movie" ToRole="UserMovieRating" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="UserMovieRatings" Relationship="MainDb.UserUserMovieRating" FromRole="User" ToRole="UserMovieRating" />
+  </EntityType>
+  <EntityType Name="UserMovieRating">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rating" Type="String" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Movie" Relationship="MainDb.MovieUserMovieRating" FromRole="UserMovieRating" ToRole="Movie" />
+    <NavigationProperty Name="User" Relationship="MainDb.UserUserMovieRating" FromRole="UserMovieRating" ToRole="User" />
+  </EntityType>
+  <Association Name="MovieUserMovieRating">
+    <End Type="MainDb.Movie" Role="Movie" Multiplicity="1" />
+    <End Type="MainDb.UserMovieRating" Role="UserMovieRating" Multiplicity="0..1" />
+  </Association>
+  <Association Name="UserUserMovieRating">
+    <End Type="MainDb.User" Role="User" Multiplicity="1" />
+    <End Type="MainDb.UserMovieRating" Role="UserMovieRating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMovieRating">
+        <PropertyRef Name="UserId1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

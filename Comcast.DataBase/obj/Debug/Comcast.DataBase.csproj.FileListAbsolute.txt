@@ -1,0 +1,11 @@
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\bin\Debug\Comcast.DataBase.dll.config
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\bin\Debug\Comcast.DataBase.dll
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\bin\Debug\Comcast.DataBase.pdb
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\bin\Debug\EntityFramework.dll
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\bin\Debug\EntityFramework.xml
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\obj\Debug\Comcast.DataBase.csproj.CoreCompileInputs.cache
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\obj\Debug\Comcast.DataBase.dll
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\obj\Debug\Comcast.DataBase.pdb
+C:\Users\tajed\Documents\projects\ComcastApi\Comcast.DataBase\obj\Debug\Comcast.DataBase.csprojResolveAssemblyReference.cache

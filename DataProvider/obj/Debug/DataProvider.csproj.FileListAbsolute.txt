@@ -1,0 +1,11 @@
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\bin\Debug\DataProvider.dll.config
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\bin\Debug\DataProvider.dll
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\bin\Debug\DataProvider.pdb
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\bin\Debug\EntityFramework.dll
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\bin\Debug\EntityFramework.xml
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\obj\Debug\DataProvider.csprojResolveAssemblyReference.cache
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\obj\Debug\DataProvider.csproj.CoreCompileInputs.cache
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\obj\Debug\DataProvider.dll
+C:\Users\tajed\Documents\projects\ComcastApi\DataProvider\obj\Debug\DataProvider.pdb
