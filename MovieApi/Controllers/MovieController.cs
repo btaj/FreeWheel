@@ -41,9 +41,9 @@ namespace MovieApi.Controllers
 		/// </summary>
 		/// <returns></returns>
 		[Route("movie/toprating")]
-		public async Task<IHttpActionResult<Task<IEnumerable<MovieAverageRatingDocument>>>> GetTopMovies()
+		public async Task<IHttpActionResult<IEnumerable<MovieAverageRatingDocument>>> GetTopMovies()
 		{
-			return await Request.CreateTypedResponse(HttpStatusCode.OK, movieResource.GetMovieAverageRating());
+			return await Request.CreateTypedResponse(HttpStatusCode.OK, await movieResource.GetMovieAverageRating());
 		}
 
 		/// <summary>
@@ -75,13 +75,7 @@ namespace MovieApi.Controllers
 			return await Request.CreateTypedResponseWithFilter(HttpStatusCode.OK,  (query) => movieResource.Search(query));	
 		}		
 
-		[Route("all")]
-		public async Task<IHttpActionResult<Task<IEnumerable<Movie>>>> GetAll()
-		{
-			return await Request.CreateTypedResponse(HttpStatusCode.OK, movieResource.GetAll());
-
-		}
-
+		
 		[HttpPost]
 		[Route("user/{userId}/movierating")]
 		public async Task<IHttpActionResult<bool>> Post(int userId, MovieRatingRequest movieRating)
